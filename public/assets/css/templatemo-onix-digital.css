@@ -674,15 +674,28 @@ header
   .header-area .main-nav {
     overflow: hidden;
   }
-  .header-area .main-nav .nav {
-    float: none;
-    width: 100%;
-    display: none;
-    -webkit-transition: all 0s ease 0s;
+  /* .header-area .main-nav .nav {
+    float: none; */
+    /* width: 100%;
+    display: none; */
+    /* -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
     -o-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
     margin-left: 0px;
+  } */
+    .header-area .main-nav .nav {
+    float: none;
+    width: 100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 0px;
+    display: none; /* Initially hide the menu */
+  }
+  .header-area .main-nav .nav.show {
+    display: block; /* Show the menu when the show class is applied */
   }
   .background-header .nav {
     margin-top: 80px;
@@ -1937,6 +1950,7 @@ responsive
   }
   .fact-item .icon {
     margin: 0 auto;
+    
   }
   
   .our-portfolio .section-heading h2,

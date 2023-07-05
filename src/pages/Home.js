@@ -1,6 +1,66 @@
-import React, { Fragment } from 'react'
-
+import React, { Fragment , useState } from 'react'
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+  
+  const testiMonials = [
+      {
+          name: 'Rekob Ramya',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+          address: 'USA',
+          img: 'https://i.ibb.co/hgGJc8d/Gareth-Bale.jpg'
+      },
+      {
+          name: 'Brandon Savage',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+          address: 'USA',
+          img: 'https://i.ibb.co/z7Kp6yr/np-file-33188.jpg'
+      },
+      {
+          name: 'Steve Burns',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+          address: 'USA',
+          img: 'https://i.ibb.co/CP5sj7g/2856040-58866808-2560-1440.jpg'
+      },
+      {
+          name: 'Kevin Canlas',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
+          address: 'USA',
+          img: 'https://i.ibb.co/10SYccm/1552313010-354215-noticia-normal.jpg'
+      },
+  ]
+  //Owl Carousel Settings
+  const options = {
+      loop: true,
+      center: true,
+      items: 3,
+      margin: 0,
+      autoplay: true,
+      dots: true,
+      autoplayTimeout: 8500,
+      smartSpeed: 450,
+      nav: false,
+      responsive: {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 3
+          },
+          1000: {
+              items: 3
+          }
+      }
+  };
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(prevState => !prevState);
+  };
+    const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu when a navigation item is clicked
+  };
   return (
     <Fragment>
     
@@ -15,7 +75,7 @@ export default function Home() {
     </div>
   </div> */}
  
-  <header className="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+ <header className="header-area header-sticky wow slideInDown"  data-wow-duration="0.75s" data-wow-delay="0s">
     <div className="container">
       <div className="row">
         <div className="col-12">
@@ -25,16 +85,18 @@ export default function Home() {
               <img src="assets/images/logo.png"/>
             </a>
          
-            <ul className="nav">
-              <li className="scroll-to-section"><a href="#top" className="active">Home</a></li>
-              <li className="scroll-to-section"><a href="#services">Services</a></li>
-              <li className="scroll-to-section"><a href="#about">About</a></li>
-              <li className="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li className="scroll-to-section"><a href="#video">Videos</a></li> 
-              <li className="scroll-to-section"><a href="#contact">Contact Us</a></li> 
-              <li className="scroll-to-section"><div className="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
+            <ul className={`nav ${isMenuOpen ? 'show' : ''}`}>
+              <li className="scroll-to-section"><a href="#top" 
+               className="active"
+              >Home</a></li>
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#services">Services</a></li>
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#about">About</a></li>
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#portfolio">Portfolio</a></li>
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#video">Videos</a></li> 
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#contact">Contact Us</a></li> 
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><div className="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
             </ul>        
-            <a className='menu-trigger'>
+            <a className='menu-trigger' onClick={handleMenuToggle}>
                 <span>Menu</span>
             </a>
          
@@ -46,13 +108,37 @@ export default function Home() {
 
 
   <div className="main-banner" id="top">
+  {/* <OwlCarousel    loop={true}
+        center= {true}
+        items= {2}
+        margin={ 0}
+        autoplay={ true}
+        dots={ true}
+        autoplayTimeout ={8500}
+        smartSpeed={ 450}
+        nav={ false}
+       
+        > */}
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
           <div className="row">
             <div className="col-lg-6 align-self-center">
-              <div className="owl-carousel owl-banner">
-                {/* <div className="item header-text">
+            <OwlCarousel  
+              loop={true}
+        center={true}
+        items={1}
+         margin={50}
+        autoplay={true}
+        dots={true}
+         
+        autoplayTimeout ={8500}
+        smartSpeed={450}
+        nav={ false}
+        //  className="owl-carousel owl-banner"
+        > 
+              {/* <div className="owl-carousel owl-banner"> */}
+                <div className="item header-text">
                   <h6>Welcome to Onix Digital</h6>
                   <h2>Build <em>your website</em> the best in <span>SEO</span>?</h2>
                   <p>This is a professional looking HTML Bootstrap 5 website template brought to you by TemplateMo website.</p>
@@ -64,7 +150,7 @@ export default function Home() {
                       <a href="#"><i className="fa fa-phone"></i> 010-020-0340</a>
                     </div>
                   </div>
-                </div> */}
+                </div>
                 <div className="item header-text">
                   <h6>Online Marketing</h6>
                   <h2>Get the <em>best ideas</em> for <span>your website</span></h2>
@@ -78,7 +164,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                {/* <div className="item header-text">
+                <div className="item header-text">
                   <h6>Video Tutorials</h6>
                   <h2>Watch <em>our videos</em> for your <span>projects</span></h2>
                   <p>Please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal if this digital marketing HTML template is useful for you. Thank you.</p>
@@ -90,13 +176,15 @@ export default function Home() {
                       <a href="#"><i className="fa fa-phone"></i> 050-040-0320</a>
                     </div>
                   </div>
-                </div> */}
-              </div>
+                </div>
+              {/* </div> */}
+              </OwlCarousel>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {/* </OwlCarousel> */}
   </div>
 
   <div id="services" className="our-services section">
@@ -116,93 +204,104 @@ export default function Home() {
         </div>
       </div>
       <div className="row">
-        {/* <div className="col-lg-12"> */}
-          {/* <div className="owl-carousel owl-services"> */}
-          <div className="col-lg-4">
+        <div className="col-lg-12">
+        <OwlCarousel    loop={true}
+        center= {true}
+        items= {3}
+        margin={ 50}
+        autoplay={ true}
+        dots={ true}
+        autoplayTimeout ={8500}
+        smartSpeed={ 450}
+        nav={ false}
+       
+        >
+          {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Learn More about our Guidelines</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Develop The Best Strategy for Business</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
-            </div></div>
-            <div className="col-lg-4">
+            </div>
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>UI / UX Design and Development</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Discover &amp; Explore our SEO Tips</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Optimizing your websites for Speed</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>See The Strategy In The Market</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
-              <p>Get to know more about the topic in details</p>/
+              <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Best Content Ideas for your pages</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Optimizing Speed for your web pages</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Accessibility for mobile viewing</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Content Ideas for your next project</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>UI &amp; UX Design &amp; Development</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-            <div className="col-lg-4">
+            {/* </div> */}
+            {/* <div className="col-lg-4"> */}
             <div className="item">
               <h4>Discover the digital marketing trend</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            </div>
-          {/* </div> */}
-        {/* </div> */}
+            {/* </div> */}
+          </OwlCarousel>
+        </div>
       </div>
     </div>
   </div>
@@ -419,7 +518,7 @@ export default function Home() {
     </div>
   </div> */}
 
-  <div id="pricing" className="pricing-tables">
+  {/* <div id="pricing" className="pricing-tables">
     <div className="tables-left-dec">
       <img src="assets/images/tables-left-dec.png" alt=""/>
     </div>
@@ -612,7 +711,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
 
   <div id="contact" className="contact-us section">
     <div className="container">
