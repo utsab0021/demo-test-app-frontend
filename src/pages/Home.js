@@ -91,8 +91,8 @@ export default function Home() {
               >Home</a></li>
               <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#services">Services</a></li>
               <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#about">About</a></li>
-              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#portfolio">Portfolio</a></li>
-              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#video">Videos</a></li> 
+              {/* <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#portfolio">Portfolio</a></li>
+              <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#video">Videos</a></li>  */}
               <li className="scroll-to-section" onClick={handleMenuItemClick}><a href="#contact">Contact Us</a></li> 
               <li className="scroll-to-section" onClick={handleMenuItemClick}><div className="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
             </ul>        
@@ -205,16 +205,9 @@ export default function Home() {
       </div>
       <div className="row">
         <div className="col-lg-12">
-        <OwlCarousel    loop={true}
-        center= {true}
-        items= {3}
-        margin={ 50}
-        autoplay={ true}
-        dots={ true}
-        autoplayTimeout ={8500}
-        smartSpeed={ 450}
-        nav={ false}
-       
+        <OwlCarousel    
+      {...options}
+     
         >
           {/* <div className="col-lg-4"> */}
             <div className="item">
@@ -717,13 +710,13 @@ export default function Home() {
     <div className="container">
       <div className="row">
         <div className="col-lg-7">
-          <div className="section-heading">
-            <h2>Feel free to <em>Contact</em> us via the <span>HTML form</span></h2>
+          <div className="section-heading align-self-center">
+            <h2>Feel free to <em>Contact</em> us</h2>
             <div id="map">
             </div>
             <div className="info">
-              <span><i className="fa fa-phone"></i> <a href="#">010-020-0340<br/>090-080-0760</a></span>
-              <span><i className="fa fa-envelope"></i> <a href="#">info@company.com<br/>mail@company.com</a></span>
+              <span><i className="fa fa-phone"></i><a href="#">010-020-0340<br/>090-080-0760</a></span>
+              <span><i className="fa fa-envelope"></i><a href="#">info@company.com<br/>mail@company.com</a></span>
             </div>
           </div>
         </div>
@@ -746,9 +739,9 @@ export default function Home() {
                 </fieldset>
               </div>
               <div className="col-lg-12">
-                <fieldset>
-                  <input type="text" name="website" id="website" placeholder="Your Website URL" required=""/>
-                </fieldset>
+              <fieldset>
+              <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            </fieldset>
               </div>
               <div className="col-lg-12">
                 <fieldset>
