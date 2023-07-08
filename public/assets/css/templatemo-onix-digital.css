@@ -1033,7 +1033,7 @@ Services Style
   text-align: center;
   margin: 15px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color:#EEE1D8;
   padding: 30px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
 }
@@ -1685,7 +1685,29 @@ Video
 contact
 --------------------------------------------- 
 */
+.containerform{
+  /* background-color: #EEE1D8; */
+}
+/* .paragraph{
+  margin-left: 180px;
 
+} */
+@media (max-width: 767px) {
+  .paragraph {
+    /* Mobile styles */
+  }
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    /* Desktop styles */
+   padding-right: 180px;
+   padding-left: 150px;
+   font-size: 20px;
+   line-height: 1.6;
+   /* text-align: justify; */
+  }
+}
 .contact-dec img {
   position: absolute;
   z-index: 1;
@@ -1763,6 +1785,7 @@ form#contact {
   margin-left: -100px;
   position: relative;
   z-index: 2;
+  /* background-color:#03a4ed; */
   background-image: url(../images/contact-form-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1822,6 +1845,7 @@ textarea {
   font-size: 14px;
   resize: vertical;
   transition: border-color 0.3s ease;
+  /* background-color: #03a4ed;; */
 }
 
 textarea:focus {
@@ -1840,7 +1864,7 @@ Footer Style
 
 .footer-dec {
   width: 100%;
-  margin-top: 160px;
+  /* margin-top: 160px; */
 }
 
 footer {
@@ -1958,6 +1982,10 @@ footer .copyright p {
 
 footer .copyright p a {
   color: #ff695f;
+}
+.containerr{
+  background-color: #1d1d1d;
+  padding-top: 60px;
 }
 
 /* 

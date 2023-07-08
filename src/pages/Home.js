@@ -209,90 +209,79 @@ export default function Home() {
       {...options}
      
         >
-          {/* <div className="col-lg-4"> */}
+         
             <div className="item">
               <h4>Learn More about our Guidelines</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+          
             <div className="item">
               <h4>Develop The Best Strategy for Business</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>UI / UX Design and Development</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>Discover &amp; Explore our SEO Tips</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>Optimizing your websites for Speed</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>See The Strategy In The Market</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>Best Content Ideas for your pages</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+          
             <div className="item">
               <h4>Optimizing Speed for your web pages</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+            
             <div className="item">
               <h4>Accessibility for mobile viewing</h4>
               <div className="icon"><img src="assets/images/service-icon-01.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+          
             <div className="item">
               <h4>Content Ideas for your next project</h4>
               <div className="icon"><img src="assets/images/service-icon-02.png" alt=""/></div>
               <p>Feel free to use this template for your business</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+          
             <div className="item">
               <h4>UI &amp; UX Design &amp; Development</h4>
               <div className="icon"><img src="assets/images/service-icon-03.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
-            {/* <div className="col-lg-4"> */}
+           
             <div className="item">
               <h4>Discover the digital marketing trend</h4>
               <div className="icon"><img src="assets/images/service-icon-04.png" alt=""/></div>
               <p>Get to know more about the topic in details</p>
             </div>
-            {/* </div> */}
+          
           </OwlCarousel>
         </div>
       </div>
@@ -707,13 +696,15 @@ export default function Home() {
   </div> */}
 
   <div id="contact" className="contact-us section">
-    <div className="container">
+    <div className="containerform">
       <div className="row">
         <div className="col-lg-7">
           <div className="section-heading align-self-center">
             <h2>Feel free to <em>Contact</em> us</h2>
             <div id="map">
             </div>
+            <div ><p className="paragraph">"We are open to everyone who wishes to discuss their business needs, and we are dedicated to providing quality service. We welcome you to join us!"</p></div>
+
             <div className="info">
               <span><i className="fa fa-phone"></i><a href="#">010-020-0340<br/>090-080-0760</a></span>
               <span><i className="fa fa-envelope"></i><a href="#">info@company.com<br/>mail@company.com</a></span>
@@ -755,8 +746,8 @@ export default function Home() {
     </div>
     <div className="contact-dec">
       <img src="assets/images/contact-dec.png" alt=""/>
-    </div>
-    <div className="contact-left-dec">
+    </div> 
+     <div className="contact-left-dec">
       <img src="assets/images/contact-left-dec.png" alt=""/>
     </div>
   </div>
@@ -766,7 +757,7 @@ export default function Home() {
   </div>
 
   <footer>
-    <div className="container">
+    <div className="containerr">
       <div className="row">
         <div className="col-lg-3">
           <div className="about footer-item">
@@ -786,10 +777,10 @@ export default function Home() {
           <div className="services footer-item">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">SEO Development</a></li>
-              <li><a href="#">Business Growth</a></li>
-              <li><a href="#">Social Media Managment</a></li>
-              <li><a href="#">Website Optimization</a></li>
+              <li><a href="#contact">SEO Development</a></li>
+              <li><a href="#contact">Business Growth</a></li>
+              <li><a href="#contact">Social Media Managment</a></li>
+              <li><a href="#contact">Website Optimization</a></li>
             </ul>
           </div>
         </div>
@@ -797,10 +788,10 @@ export default function Home() {
           <div className="community footer-item">
             <h4>Community</h4>
             <ul>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">Business Ideas</a></li>
-              <li><a href="#">Website Checkup</a></li>
-              <li><a href="#">Page Speed Test</a></li>
+              <li><a href="#contact">Digital Marketing</a></li>
+              <li><a href="#contact">Business Ideas</a></li>
+              <li><a href="#contact">Website Checkup</a></li>
+              <li><a href="#contact">Page Speed Test</a></li>
             </ul>
           </div>
         </div>
