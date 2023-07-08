@@ -8,7 +8,7 @@ const Contact = () => {
                             <div class="section-heading">
                                 <h2>Feel free to <em>Contact</em> us via the <span>HTML form</span></h2>
                                 <div id="map">
-                                    <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" style={{ width: "100%", height: "360px", frameborder: "0", allowfullscreen: "" }}></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48440.25732258441!2d88.45712773391651!3d23.401752523530817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f920440311b935%3A0x9cda677e2c6a67af!2sKrishnanagar%2C%20West%20Bengal!5e1!3m2!1sen!2sin!4v1688823923064!5m2!1sen!2sin" style={{ width: "100%", height: "360px", frameborder: "0", allowfullscreen: "" }}></iframe>
                                 </div>
                                 <div class="info">
                                     <span><i class="fa fa-phone"></i> <a href="#">010-020-0340<br />090-080-0760</a></span>
